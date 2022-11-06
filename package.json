@@ -1,0 +1,20 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch index.scss index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabe974Dev/p3-ohmyfood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fabe974Dev/p3-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Fabe974Dev/p3-ohmyfood#readme"
+}
