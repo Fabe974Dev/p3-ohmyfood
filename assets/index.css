@@ -607,6 +607,8 @@ footer li a {
   padding: 1.2rem 1.4rem;
   margin-bottom: 1rem;
   background-color: #fff;
+  animation: appear 1s forwards;
+  opacity: 0;
 }
 .menu .menu__card__txt {
   font-size: 1.2rem;
@@ -632,6 +634,20 @@ footer li a {
 .btn-box .page__btn {
   margin: 4rem auto 5rem auto;
   padding: 1.5rem 5rem;
+}
+
+@keyframes appear {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  75% {
+    opacity: 30%;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -339,6 +339,8 @@ footer {
     padding: 1.2rem 1.4rem;
     margin-bottom: 1rem;
     background-color: #fff;
+    animation: appear 1s forwards;
+    opacity: 0;
 
     &__txt {
       font-size: 1.2rem;
@@ -371,6 +373,22 @@ footer {
 }
 
 
+
+// animation
+
+ @keyframes appear {
+0%{
+  transform: translatey(20px);
+  opacity: 0%;
+}
+75%{
+  opacity: 30%;
+}
+100%{
+  transform: translatey(0px);
+    opacity: 100%;
+}
+ }
 
 @media all and (max-width:$mobile) {
   body {
