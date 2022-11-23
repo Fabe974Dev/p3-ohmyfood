@@ -397,7 +397,12 @@ body {
   background: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
   margin: 3rem 0 6rem 0;
-  box-shadow: 0 0.1rem 1rem 0.2rem #bebebe;
+  box-shadow: 0 0.1rem 1rem 0.2rem rgb(190, 190, 190);
+  cursor: pointer;
+}
+.presentation__btn:hover {
+  filter: brightness(1.1);
+  box-shadow: rgba(190, 190, 190, 0.25) 0rem 3rem 6rem -1.2rem, rgba(0, 0, 0, 0.3) 0rem 1.8rem 3.6rem -1.8rem;
 }
 
 .functioning__title {
@@ -414,6 +419,13 @@ body {
   font-size: 1.5rem;
   position: relative;
   box-shadow: 0 0.1rem 1rem 0.3rem #dedede;
+  cursor: pointer;
+}
+.container-operation:hover {
+  background-color: rgba(146, 86, 220, 0.15);
+}
+.container-operation:hover span {
+  color: #9356DC;
 }
 .container-operation__number {
   display: inline-block;
@@ -438,13 +450,6 @@ body {
 .container-operation__text > span {
   color: #808080;
   padding-right: 2rem;
-}
-
-.bloc-operation :nth-child(3) {
-  background-color: rgba(146, 86, 220, 0.15);
-}
-.bloc-operation :nth-child(3) span {
-  color: #9356DC;
 }
 
 .restaurant {
@@ -498,9 +503,23 @@ body {
   padding: 0 0 1rem 1.5rem;
   font-size: 1.6rem;
 }
-.card__description .fa-heart {
+.card__description .fa-regular {
   padding: 1rem 2rem 0 0;
   font-size: 2.5rem;
+  color: black;
+  position: absolute;
+}
+.card__description .fa-solid.fa-heart {
+  padding: 1rem 2rem 0 0;
+  font-size: 2.5rem;
+  color: transparent;
+  background: linear-gradient(to top, #FF79DA, #9356DC 70%, #fff 70%);
+  background-clip: text;
+  opacity: 0;
+}
+.card__description .fa-solid.fa-heart:hover {
+  opacity: 1;
+  transform: scale(1);
 }
 
 footer {
@@ -604,26 +623,37 @@ footer li a {
   justify-content: space-between;
   border-radius: 1.5rem;
   box-shadow: 0 0.1rem 1rem 0.3rem #dedede;
-  padding: 1.2rem 1.4rem;
   margin-bottom: 1rem;
   background-color: #fff;
   animation: appear 1s forwards;
   opacity: 0;
 }
 .menu .menu__card__txt {
+  margin: auto 0;
+  padding: 1.5rem 1.5rem;
   font-size: 1.2rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 70%;
 }
 .menu .menu__card__txt p {
   font-size: 1.7rem;
   padding: 0.5rem 0;
 }
 .menu .menu__card__price {
+  margin: auto 1.5rem;
   font-size: 1.7rem;
-  padding-top: 2.5rem;
   font-weight: 600;
 }
 .menu .menu__card__valid {
-  display: none;
+  border: 1px solid red;
+  padding: 3.1rem 3.1rem;
+  margin: auto 0rem;
+  font-size: 2.6rem;
+  border-radius: 0 1.5rem 1.5rem 0;
+  color: #fff;
+  background: #99E2D0;
 }
 
 .btn-box {
@@ -636,12 +666,73 @@ footer li a {
   padding: 1.5rem 5rem;
 }
 
+.loading-box {
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.9;
+  animation: disappear 5s forwards;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border: 1.6rem solid #bdc3c7;
+  width: 12rem;
+  height: 12rem;
+  border-top-color: #99E2D0;
+  border-bottom-color: #FF79DA;
+  border-radius: 50%;
+  animation: chargeur 8s linear infinite;
+}
+
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  25% {
+    border-top-color: #FF79DA;
+    border-bottom-color: #FF79DA;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.15);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+  75% {
+    border-top-color: #99E2D0;
+    border-bottom-color: #99E2D0;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+  }
+}
 @keyframes appear {
   0% {
     transform: translatey(20px);
     opacity: 0%;
   }
-  75% {
+  60% {
     opacity: 30%;
   }
   100% {
