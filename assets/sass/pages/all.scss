@@ -1,0 +1,90 @@
+.header-page {
+  display: flex;
+  box-shadow: none;
+
+  a {
+    color: #000;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    padding-left: 2.5rem;
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.background-menu {
+  width: 100%;
+  max-height: 32rem;
+  object-fit: cover;
+}
+
+
+.menu-box {
+  border-radius: 4rem 4rem 0 0;
+  margin-top: -5rem;
+  background-color: #f6f6f6;
+  position: relative;
+  z-index: 1;
+}
+
+.restaurant-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.4rem 0 0 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: $titres;
+  font-style: italic;
+
+  h1 {
+    font-weight: 400;
+  }
+
+  &__heart {
+    font-size: 2.5rem;
+    color: black;
+    cursor: pointer;
+
+    .fa-regular {
+      position: absolute;
+      right: 1.2rem;
+      top: 3.6rem;
+
+      z-index: 1;
+
+      &:active+.fa-solid {
+        z-index: 2;
+        opacity: 1;
+        transform: scale(1.1);
+        clip: rect(0px, 45px, 45px, 0px);
+      }
+
+    }
+  }
+
+  .fa-solid {
+    position: absolute;
+    z-index: 0;
+    right: 1.2rem;
+    top: 3.6rem;
+    background: linear-gradient($secondary, $primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    clip: rect(45px, 45px, 45px, 0px);
+    transition: clip 0.5s;
+    opacity: 0;
+    transform: scale(1);
+    transition: all 0.4s;
+  }
+}

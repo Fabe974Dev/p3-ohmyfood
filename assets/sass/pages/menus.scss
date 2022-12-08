@@ -1,0 +1,122 @@
+
+.menu {
+  h1 {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  .menu__title::after {
+    content: "";
+    width: 4rem;
+    height: 0.4rem;
+    background-color: $ternary;
+    display: block
+  }
+
+  .menu__card {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.1rem 1rem 0.3rem #dedede;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+    animation: appear 1s forwards;
+    opacity: 0;
+
+    &__txt {
+      margin: auto 0;
+      padding: 1.5rem 1.5rem;
+      font-size: 1.2rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      h2 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+
+
+
+      p {
+        font-size: 1.7rem;
+        padding: 0.5rem 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    &__price {
+
+      margin: auto 1.5rem;
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-left: auto;
+      padding-right: 1.5rem;
+
+    }
+
+    &__valid {
+      padding: 3.1rem 3.1rem;
+      margin: auto 0rem;
+      font-size: 2.6rem;
+      border-radius: 0 1.5rem 1.5rem 0;
+      color: #fff;
+      background: $ternary;
+      transition: margin-right .5s;
+      margin-right: -100px;
+
+      .fa-circle-check {
+        transform: rotate(0deg);
+        transition: transform .4s ease-in-out;
+
+      }
+    }
+    
+    &:active .menu__card__valid {
+      
+      margin-right: 0;
+
+      .fa-circle-check {
+        transform: rotate(360deg);
+      }
+    }
+
+    overflow: hidden
+  }
+}
+
+.btn-box {
+  @include flex-center;
+
+  .page__btn {
+    margin: 4rem auto 5rem auto;
+    padding: 1.5rem 5rem;
+  }
+}
+
+
+@keyframes appear {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+
+  60% {
+    opacity: 30%;
+  }
+
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}

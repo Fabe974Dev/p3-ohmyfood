@@ -1,18 +1,11 @@
 /**/
 
 
-$XS: 5px;
-$S: 10px;
-$S_: 15px;
-$M: 20px;
-$L: 30px;
-$XL: 50px;
-$XXL: 60px;
-
 $titres: 'Shrikhand', cursive;;
 $contenus:'Roboto', sans-serif;
 
 $primary: #9356DC;
 $secondary: #FF79DA;
 $ternary: #99E2D0;
-
+$linear: linear-gradient($secondary, $primary);
+$breakpoints: (mobile:767px , desktop:991px);

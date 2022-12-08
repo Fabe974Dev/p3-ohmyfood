@@ -1,0 +1,99 @@
+.presentation {
+  @include flex-center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    padding: 2.5rem 0 0 0;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+
+  }
+
+  &__btn {
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 2.5rem;
+    border: none;
+    background: linear-gradient($secondary, $primary);
+    color: #fff;
+    margin: 3rem 0 6rem 0;
+    box-shadow: 0 0.1rem 1rem 0.2rem rgb(190, 190, 190);
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: rgba(190, 190, 190, 0.25) 0rem 3rem 6rem -1.2rem,
+        rgba(0, 0, 0, 0.3) 0rem 1.8rem 3.6rem -1.8rem;
+    }
+  }
+}
+
+.functioning__title {
+  font-size: 2.5rem;
+  padding-left: 3.5rem;
+}
+
+
+.bloc-operation {
+  @include desktop-only {
+    display: flex;
+    
+  }
+
+  .container-operation {
+    @include desktop-only {
+      width: calc(30% - 3rem);
+    }
+    text-align: center;
+    border-radius: 2rem;
+    background-color: #f6f6f6;
+    width: 80%;
+    margin: 2.5rem auto;
+    font-size: 1.5rem;
+    position: relative;
+    box-shadow: 0 0.1rem 1rem 0.3rem #dedede;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(146, 86, 220, 0.15);
+
+      & span {
+        color: $primary;
+      }
+    }
+
+    &__number {
+      @include number-center;
+    }
+
+    &__text {
+      padding: 3rem 2rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+
+      &>span {
+        color: #808080;
+        padding-right: 2rem;
+      }
+    }
+  }
+}
+
+.restaurant {
+  margin-bottom: 6rem;
+
+  .restaurant__tilte {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    padding: 5rem 0 0 3.5rem;
+
+  }
+}

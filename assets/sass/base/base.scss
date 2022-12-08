@@ -1,5 +1,16 @@
-/**/
-// :root{
-//     font-family: $contenus;
-// }
+:root {
+  box-sizing: border-box;
+  font-size: $font-base;
+}
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $contenus;
+}

@@ -1,4 +1,5 @@
 
+@import "./themes/template";
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
@@ -9,12 +10,13 @@
 @import "./base/typography";
 // @import "./vendors/";
 
-@import "./themes/template";
 
+@import "./components/logoContainer";
 @import "./components/buttons";
 @import "./components/lists";
 @import "./components/cards";
 
+@import "./layouts/wrapper";
 @import "./layouts/header";
 @import "./layouts/nav";
 @import "./layouts/main";

@@ -1,27 +1,39 @@
-/**/
+
+/*Mise en place des mixins*/
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin number-center {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 3rem;
+    background-color: $primary;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  
 
 @mixin mobile-only($max: map-get($breakpoints, mobile)) {
     @media screen and (max-width: $max){
         @content;
     }
 }
-@mixin tablette-only($min: map-get($breakpoints, mobile) + 1, $max: map-get($max, desktop) - 1) {
-    @media screen and (min-width: $min) and (max-width: $max){
-        @content;
-    }
-}
+
 @mixin desktop-only($min: map-get($breakpoints, desktop)) {
     @media screen and (min-width: $min ){
         @content;
+       
     }
-}
-@mixin mobile-and-tablette($max: map-get($breakpoints, desktop) -1) {
-    @media screen and (max-width: $max) {
-        @content;
-    }
-}
-@mixin tablette-and-desktop($min: map-get($breakpoints, desktop)) {
-    @media screen and (min-width: $min) {
-        @content;
-    }
+
 }
