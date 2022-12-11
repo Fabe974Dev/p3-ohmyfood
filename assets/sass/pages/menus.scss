@@ -1,4 +1,3 @@
-
 .menu {
   h1 {
     width: 90%;
@@ -65,6 +64,7 @@
 
     }
 
+    /*Mise en place du code pour animations validations des pages restaurants.*/
     &__valid {
       padding: 3.1rem 3.1rem;
       margin: auto 0rem;
@@ -75,15 +75,17 @@
       transition: margin-right .5s;
       margin-right: -100px;
 
+      /*Mise en place du code pour animations validations des pages restaurants.*/
       .fa-circle-check {
         transform: rotate(0deg);
         transition: transform .4s ease-in-out;
 
       }
     }
-    
+
+    /*Mise en place du code pour animations validations des pages restaurants.*/
     &:active .menu__card__valid {
-      
+
       margin-right: 0;
 
       .fa-circle-check {
@@ -104,7 +106,7 @@
   }
 }
 
-
+/*Mise en place du code pour animations apparitions des menus des pages restaurants.*/
 @keyframes appear {
   0% {
     transform: translatey(20px);

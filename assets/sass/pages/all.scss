@@ -1,3 +1,4 @@
+/*Mise en place du code pour le css des pages restaurants.*/
 .header-page {
   display: flex;
   box-shadow: none;
@@ -62,6 +63,7 @@
 
       z-index: 1;
 
+      /*Mise en place du code pour animations des coeurs des pages restaurants.*/
       &:active+.fa-solid {
         z-index: 2;
         opacity: 1;
@@ -72,6 +74,7 @@
     }
   }
 
+  /*Mise en place du code pour animations des coeurs des pages restaurants.*/
   .fa-solid {
     position: absolute;
     z-index: 0;

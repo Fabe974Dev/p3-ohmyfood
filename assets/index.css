@@ -1,8 +1,4 @@
-/*Mise en place des import*/ /**/ /**/
-/*Mise en place des varibles*/
-/**/
-/*Mise en place des mixins*/
-/**/
+/*Mise en place des imports*/ /*Mise en place des imports*/ /*Mise en place des variables.*/ /*Mise en place des varibles*/ /*Mise en place des mixins*/ /*Mise en place du code de base.*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 :root {
@@ -338,7 +334,7 @@ ul {
   list-style: none;
 }
 
-/**/
+/*Mise en place des fonts.*/ /*Mise en place du code pour le conteneur logo.*/
 .logo-container {
   width: 100%;
   text-align: center;
@@ -350,7 +346,7 @@ ul {
   margin: 2rem 0;
 }
 
-/**/
+/*Mise en place du code pour les cards.*/
 @media screen and (min-width: 991px) {
   .bloc-card {
     display: flex;
@@ -392,6 +388,7 @@ ul {
 .bloc-card .card__description {
   display: flex;
   justify-content: space-between;
+  /*Mise en place du code animation remplissage coeur.*/
 }
 .bloc-card .card__description > * {
   text-decoration: none;
@@ -419,6 +416,7 @@ ul {
   color: transparent;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   position: absolute;
   clip: rect(45px, 45px, 45px, 0px);
   transition: clip 0.5s;
@@ -427,13 +425,14 @@ ul {
   clip: rect(0px, 45px, 45px, 0px);
 }
 
+/*Mise en place du code pour le Wrapper de la page.*/
 .page-wrapper {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/**/
+/*Mise en place du code pour le header.*/
 .search-bar {
   height: 5rem;
   background: #f0f0f0;
@@ -451,6 +450,7 @@ ul {
   font-weight: 400;
 }
 
+/*Mise en place du code pour le loader.*/
 .loading-box {
   background-color: #fff;
   max-width: 1400px;
@@ -463,6 +463,7 @@ ul {
   animation: disappear 3s forwards;
 }
 
+/*Mise en place du code pour animation de disparition.*/
 @keyframes disappear {
   0% {
     opacity: 1;
@@ -472,6 +473,7 @@ ul {
     z-index: -1;
   }
 }
+/*Mise en place du code pour positionnement du loader.*/
 .loader {
   width: 100%;
   height: 100%;
@@ -488,6 +490,7 @@ ul {
   animation: chargeur 8s linear infinite;
 }
 
+/*Mise en place du code pour rotation du loader.*/
 @keyframes chargeur {
   0% {
     transform: rotate(0deg) scale(1);
@@ -513,7 +516,7 @@ ul {
     border-bottom-color: #9356DC;
   }
 }
-/* ooo */
+/*Mise en place du code pour le main.*/
 .presentation {
   display: flex;
   align-items: center;
@@ -614,6 +617,7 @@ ul {
   padding: 5rem 0 0 3.5rem;
 }
 
+/*Mise en place du code pour le footer*/
 footer {
   padding: 0 5%;
   background-color: #3a3a3a;
@@ -641,6 +645,7 @@ footer li a {
   font-size: 1.6rem;
 }
 
+/*Mise en place du code pour le css des pages restaurants.*/
 .header-page {
   display: flex;
   box-shadow: none;
@@ -684,6 +689,7 @@ footer li a {
   font-weight: 600;
   font-family: "Shrikhand", cursive;
   font-style: italic;
+  /*Mise en place du code pour animations des coeurs des pages restaurants.*/
 }
 .restaurant-name h1 {
   font-weight: 400;
@@ -698,6 +704,7 @@ footer li a {
   right: 1.2rem;
   top: 3.6rem;
   z-index: 1;
+  /*Mise en place du code pour animations des coeurs des pages restaurants.*/
 }
 .restaurant-name__heart .fa-regular:active + .fa-solid {
   z-index: 2;
@@ -749,6 +756,8 @@ footer li a {
   cursor: pointer;
   animation: appear 1s forwards;
   opacity: 0;
+  /*Mise en place du code pour animations validations des pages restaurants.*/
+  /*Mise en place du code pour animations validations des pages restaurants.*/
   overflow: hidden;
 }
 .menu .menu__card__txt {
@@ -785,6 +794,7 @@ footer li a {
   background: #99E2D0;
   transition: margin-right 0.5s;
   margin-right: -100px;
+  /*Mise en place du code pour animations validations des pages restaurants.*/
 }
 .menu .menu__card__valid .fa-circle-check {
   transform: rotate(0deg);
@@ -807,6 +817,7 @@ footer li a {
   padding: 1.5rem 5rem;
 }
 
+/*Mise en place du code pour animations apparitions des menus des pages restaurants.*/
 @keyframes appear {
   0% {
     transform: translatey(20px);
@@ -823,6 +834,5 @@ footer li a {
 /***********************************/
 /***********************************/
 /***********************************/
-/*pages*/
 
 /*# sourceMappingURL=index.css.map */

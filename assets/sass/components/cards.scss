@@ -1,3 +1,5 @@
+/*Mise en place du code pour les cards.*/
+
 .bloc-card {
   @include desktop-only {
     display: flex;
@@ -8,6 +10,7 @@
     @include desktop-only {
       width: calc(50% - 3rem);
     }
+
     border-radius: 1.5rem;
     box-shadow: 0 0.1rem 1rem 0.3rem #dedede;
     margin: 0 auto 2rem auto;
@@ -72,15 +75,16 @@
         color: transparent;
         background: linear-gradient($secondary , $primary);
         background-clip: text;
+        -webkit-background-clip: text;
         position: absolute;
         clip: rect(45px, 45px, 45px, 0px);
         transition: clip 0.5s;
 
       }
 
+      /*Mise en place du code animation remplissage coeur.*/
       .fa-regular.fa-heart:hover+.fa-solid {
-        // opacity: 1;
-        // transform: scale(1);
+
         clip: rect(0px, 45px, 45px, 0px);
       }
 
